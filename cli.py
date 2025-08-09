@@ -1,16 +1,15 @@
 import argparse
+from cronos import *
 
-from cronos import parse_cron_expression
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('expression', type=str, help="Input expression to be parsed to Cronos")
+    parser.add_argument(
+        "expression", type=str, help="Input expression to be parsed to Cronos"
+    )
     args = parser.parse_args()
+    run_cronos(args.expression)
 
-    input_expression = args.expression
-    parsed = parse_cron_expression(input_expression)
-    
-    print("Parsed fields:")
-    print(parsed)
 
-main()
+if __name__ == "__main__":
+    main()
