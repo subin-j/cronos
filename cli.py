@@ -1,5 +1,7 @@
 import argparse
-from cronos import *
+from pprint import pprint
+
+from cronos import Cronos
 
 
 def main():
@@ -8,7 +10,10 @@ def main():
         "expression", type=str, help="Input expression to be parsed to Cronos"
     )
     args = parser.parse_args()
-    run_cronos(args.expression)
+    # input_example= "*/15 0 1,15 * 1-5 /usr/bin/find"
+
+    cronos = Cronos()
+    print(cronos.run_cronos(args.expression))
 
 
 if __name__ == "__main__":
