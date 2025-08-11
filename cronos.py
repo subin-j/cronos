@@ -1,6 +1,5 @@
-from constants import *
-
-from utils import *
+from constants import FIELD_DICT, FIELD_NAME_WIDTH
+from utils import validate_input_string, Parser
 
 
 class Cronos:
@@ -29,8 +28,6 @@ class Cronos:
         for field_name, expr in zip(field_names, expressions):
             field_expr_map[field_name] = expr
         validate_input_string(field_expr_map)
-
-        print(field_expr_map)
         return field_expr_map
 
     def _expand_expressions(self, field_expr_map: dict) -> dict:
