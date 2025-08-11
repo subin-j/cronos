@@ -12,8 +12,10 @@ def main():
     args = parser.parse_args()
     # input_example= "*/15 0 1,15 * 1-5 /usr/bin/find"
 
-    cronos = Cronos()
-    print(cronos.run_cronos(args.expression))
+    if args:
+        input_expr = str(args.expression)
+        cronos = Cronos(input_expr)
+        cronos.run_cronos()
 
 
 if __name__ == "__main__":
