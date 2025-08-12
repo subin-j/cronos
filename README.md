@@ -14,7 +14,7 @@ cronos/
 # Cronos — Cron Expression Parser
 
 ## Overview
-A simple CLI that parses a standard 5-field cron expression and expands each field into concrete values.
+A simple CLI that parses a standard 5-field cron expression + command. Expands and print a table containing each field with concrete values.
 
 ## Requirements
 - Python 3.x
