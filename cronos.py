@@ -1,6 +1,6 @@
 import argparse
 
-from cronos import Cronos
+from app import Cronos
 
 
 def main():

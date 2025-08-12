@@ -1,10 +1,9 @@
 import sys
 import pytest
 
-from cronos import Cronos
+from app import Cronos
 from utils import Parser, validate_input_string
 from constants import FIELD_DICT
-import cli
 
 
 def test_cronos_end_to_end_happy(capsys):
