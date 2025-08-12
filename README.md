@@ -3,12 +3,12 @@ cronos/
 ├── venv/
 ├── .gitignore
 ├── README.md
-├── cli.py
+├── cronos.py          # CLI entry
 ├── constants.py
-├── cronos.py
+├── app.py             # Business logic
 ├── requirements.txt
 ├── test_cronos.py
-└── utils.py
+└── utils.py           # Parser and validators
 ```
 
 # Cronos — Cron Expression Parser
@@ -22,17 +22,23 @@ A simple CLI that parses a standard 5-field cron expression and expands each fie
 
 ## Local Run (macOS/Linux)
 
-Activate venv
+### Activate venv
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 ```
+### Install requirements
 ```bash
 pip install -r requirements.txt
 ```
 
+### Run Pytest
+```bash
+pytest -v
+```
+
 ### Run the app (example command)
 ```bash
-python3 cli.py "*/15 0 1,15 * 1-5 /usr/bin/find"
+python3 cronos.py "*/15 0 1,15 * 1-5 /usr/bin/find"
 ```
 ### Example Output
 
