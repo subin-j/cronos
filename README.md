@@ -24,7 +24,7 @@ A simple CLI that parses a standard 5-field cron expression + command. Expands a
 
 ### Activate venv
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
+python3 -m venv venv && source venv/bin/activate
 ```
 ### Install requirements
 ```bash
